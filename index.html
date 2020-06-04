@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Teko' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.0.0/bootstrap-social.css">
+
+    <style>
+        . {
+            margin: 10px;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+        }
+
+        .overlay-content {
+            position: relative;
+            width: 100%;
+            text-align: right;
+        }
+
+        .overlay a {
+            padding: 20px;
+            text-decoration: none;
+            font-size: 35px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            font-family: teko;
+            letter-spacing: normal;
+            line-height: 1;
+
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: whitesmoke;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 1px;
+            right: 35px;
+            font-size: 40px;
+        }
+
+        .container {
+            position: absolute;
+            left: -15px;
+            text-align: center;
+            color: white;
+        }
+
+        .centered {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            right: 50%
+        }
+
+        .Rectangle-4 {
+            width: 335px;
+            height: 50px;
+            background-color: black;
+            color: white;
+        }
+
+        .view1 {
+            width: 190px;
+            height: 30px;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2;
+            letter-spacing: normal;
+            text-align: center;
+            background: black;
+            color: white;
+            position: absolute;
+            top: 86%;
+            right: 20%;
+        }
+
+        .view2 {
+            width: 10%;
+            height: 4%;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: bold;
+            background: black;
+            color: white;
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .dropbtn {
+
+            color: #000000;
+            padding: 1px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            font-family: teko;
+            width: 125px;
+            height: 24px;
+            font-size: 20px;
+            background: white;
+            position: absolute;
+
+        }
+
+        .dropdown {
+            position: absolute;
+            right: 1%;
+            bottom: 10%
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .NAME {
+            width: 335px;
+            height: 30px;
+            font-family: Arial;
+            font-size: 30px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.14;
+            letter-spacing: normal;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            ×
+        </a>
+        <p style="color:white; font-size:20px">DEPT</p>
+
+        <div class="overlay-content">
+            <a href="#" style=" border-bottom: 1px solid white;" class="Home">Home</a>
+            <a href="#" style=" border-bottom: 1px solid white;">Werk</a>
+            <a href="#" style=" border-bottom: 1px solid white;">Over</a>
+            <a href="#" style=" border-bottom: 1px solid white;">Diensten</a>
+            <a href="#" style=" border-bottom: 1px solid white;">Partners</a>
+            <a href="#" style=" border-bottom: 1px solid white;">Stories</a>
+            <a href="#" style=" border-bottom: 1px solid white;">Vacatures</a>
+            <a href="#" style=" border-bottom: 1px solid white;">Events</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer; position:absolute; right: 30px; top:10px" onclick="openNav()">
+        ≡
+    </span>
+    &nbsp; &nbsp;
+    <span style="font-size:30px; position:absolute; right: 90px;font-family: GoodPro-Cond; top:10px">
+        MENU
+    </span>
+    <span style="font-size:30px; position:absolute; left:10px; top:10px">
+        DEPT
+    </span>
+    <br> <br>
+    <img src="img/1.jpg" alt="Snow" style=" width: 130%; height: 500px;">
+    <div class="centered" style="color: black; width: 300px;
+                height: 140px;
+                font-family: Teko;
+                font-size: 120px; position: absolute; left:50px">WORK
+    </div>
+    <br> <br>
+
+
+    <div class="view2 d-none d-xl-block">
+        VIEW CASE
+    </div>
+    <div class="view1 d-block d-sm-none">
+        VIEW CASE
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-1 offset-9">
+                <div class="dropdown">
+
+                    <button class="dropbtn"> Show me ▼ </button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-3 offset-9">
+                <div class="dropdown">
+
+                    <button class="dropbtn"> In ▼ </button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <br> <br>
+
+
+
+    <div class="row">
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/2.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">BOL.COM</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">A summer island in the Netherlands</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; border-bottom: 1px solid gray; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/3.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">KEMPEN</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">Not some avergaae banking wesite</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; border-bottom: 1px solid gray; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/4.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">PHILIPS</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">Beautiful design meets innovative
+                        technology</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/5.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">GEMEENTEMUSEUM</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">A 100 years of Mondriaan and De Stijl</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 60rem;">
+                <img src="img/1.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">FLORENIS</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">Rethinking the entire ecosystem</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold;  padding-bottom: 20px">▶
+                        VIEW CASE</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 offset-1"> <br>
+            <p style="color: gray; border-top: 1px solid gray; padding-top: 20px">MICROSOFT</p>
+            <p style="font-family: Teko; font-size: 30px; color: black"> Tapping in to Ireland's Unique gaming culture
+                and bringing a fresh flavour to thier Cbox social media channels</p>
+            <p style="color:blue; font-family: arial; font-weight: bold; border-bottom: 1px solid gray; padding-bottom: 20px">▶
+                VIEW CASE</p>
+            <p style="color: gray;">O'NEILL</p>
+            <p style="font-family: Teko; font-size: 30px; color: black"> Integrating existing content in to O'NEILL'S
+                new e-commerce platform</p>
+            <p style="color:blue; font-family: arial; font-weight: bold; border-bottom: 1px solid gray; padding-bottom: 20px">▶
+                VIEW CASE</p>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/6.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">BE LIGHTING</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">Delivering clarity on a global scale</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/7.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">TUI</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">Swipe to find your next holiday
+                        destination</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-3 offset-1"> <br>
+            <p style="color: gray; border-top: 1px solid gray; padding-top: 20px">BUTLINS</p>
+            <p style="font-family: Teko; font-size: 30px; color: black"> Enhancing customer experience for personalised
+                holiday planning using reak time data</p>
+            <p style="color:blue; font-family: arial; font-weight: bold; border-bottom: 1px solid gray; padding-bottom: 20px">▶
+                VIEW CASE</p>
+            <p style="color: gray;">VACANSESELECT</p>
+            <p style="font-family: Teko; font-size: 30px; color: black"> Predict booking behaviour for holidays with
+                smart data, voice, search and machine learning</p>
+            <p style="color:blue; font-family: arial; font-weight: bold; border-bottom: 1px solid gray; padding-bottom: 20px">▶
+                VIEW CASE</p>
+        </div>
+
+        <div class="col-sm-7 offset-1">
+            <div class="card text-body bg-light mb-3 " style="max-width: 60rem;">
+                <img src="img/1.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">FLORENIS</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">Rethinking the entire ecosystem</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold;  padding-bottom: 20px">▶
+                        VIEW CASE</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/8.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">CHOCOMEL</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">A campaign for the limited edition
+                        letter packs</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/9.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">JBL</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">Live like a champion with Jerome
+                        Buteng</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/10.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">ZALANDO</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">Innovative SEO and content strategy
+                        for ZALANDO</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/11.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">KONNINKLIJKE
+                        BIBLIOTHEEK</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">The search for the most infulential
+                        book ever</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-11 offset-1 " style="text-align: center">
+            <br>
+            <p style="font-family: Teko; font-size: 40px; color: black;  line-height: 1.28; border-top: gray solid 1px; padding-top: 10px">
+                " DEPT helped us to tell
+                our story through a bold new identity and a robust <br> online exoerience. To the
+                tune of 60% of the growth in onine bookings in just <br> one month. "</p>
+            <p style="font-family: arial; font-weight: bold; font-size: 20px; color: gray ">MATJIS TEN BRINK - CEO,
+                TRANSAVIA</p>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/12.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;">LIBERTY GLOBAL</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">Delivering complex commerce solutions</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 offset-1">
+            <div class="card text-body bg-light mb-3" style="max-width: 45rem;">
+                <img src="img/13.jpg" height="350">
+                <div class="card-body">
+                    <p style="color: gray;font-family: Arial; font-size: 30px; font-weight: bold;"> ARLA</p>
+                    <p style=" font-family: Teko; font-size: 30px; color: black">Swipe to find your next holiday
+                        destination</p>
+                    <p style="color:blue; font-family: arial; font-weight: bold; padding-bottom: 20px">▶
+                        VIEW CASE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="background: rgb(245, 239, 239); color: black">
+        <p style="text-align: center; font-family: teko; font-size: 60px; padding-top:80px">CLIENTS</p>
+        <p style="text-align: center; padding-top:20px; font-size:arial; font-size: 20px">We value a great working
+            relationship with our clients above all else. <br> Its why they often come to our parties
+            It's why also we are able to chanllenge <br> and inspire them to reach for the stars</p>
+        <i class="fab fa-microsoft fa-lg">Microsoft</i>
+    </footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 offset-1" style="color: black">
+                <p style="font-family: teko; font-size: 60px; padding-top: 20px">QUESTION ? <BR>
+                    WE ARE HERE TO HELP</p>
+            </div>
+            <div class="col-6 offset-1" style="color: black">
+                <div class="row">
+                    <div class="col-6">
+                            <p style="border-bottom: 1px solid gray; font-family: arial; font-size: 20px; padding-bottom: 30px;padding-top:20px;font-weight: bold">
+                                    Name</p>
+                                    
+                    </div>
+                    <div class="col-5 offset-1">
+                            <p style="border-bottom: 1px solid gray; font-family: arial; font-size: 20px; padding-bottom: 30px;padding-top:20px;font-weight: bold">
+                                    EMAIL</p>
+                            <p style="color: red">This field is required</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                            <p style="border-bottom: 1px solid gray; font-family: arial; font-size: 20px; padding-bottom: 100px;padding-top:20px;font-weight: bold">
+                                    MESSAGE</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <p style="color: white; background: blue; font-family: arial; font-size: 30px; padding: 10px 10px 10px 10px; width:140px; height:50px">SEN</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        } 
+    </script>
+</body>
+
+</html>
